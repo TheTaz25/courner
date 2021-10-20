@@ -1,0 +1,92 @@
+.c-button {
+  border-radius: 0;
+  padding: 8px;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 4px;
+}
+.c-button.c-corner-tr {
+  border-top-right-radius: 16px;
+}
+.c-button.c-button-gray {
+  border-color: var(--gray-shade-15);
+  background-color: var(--gray);
+}
+.c-button.c-button-primary {
+  border-color: var(--primary-shade-15);
+  background-color: var(--primary);
+}
+.c-button.c-button-secondary {
+  border-color: var(--secondary-shade-15);
+  background-color: var(--secondary);
+}
+.c-button.c-button-success {
+  border-color: var(--success-shade-15);
+  background-color: var(--success);
+}
+.c-button.c-button-warning {
+  border-color: var(--warning-shade-15);
+  background-color: var(--warning);
+}
+.c-button.c-button-error {
+  border-color: var(--error-shade-15);
+  background-color: var(--error);
+}
+.c-button.c-button-info {
+  border-color: var(--info-shade-15);
+  background-color: var(--info);
+}
+.c-button.c-button-default {
+  border-width: 0;
+  background-color: transparent;
+}
+.c-button.c-button-filled {
+  border-width: 2px;
+}
+.c-button.c-button-outlined {
+  border-width: 2px;
+  background-color: transparent;
+}
+.c-button.c-button-light {
+  border-width: 2px;
+}
+:root {
+  --primary-tint-30: #8ef1c9;
+  --primary-tint-15: #4be8a9;
+  --primary: #1ACC85;
+  --primary-shade-15: #118859;
+  --primary-shade-30: #09442d;
+  --secondary-tint-30: #f7ccde;
+  --secondary-tint-15: #ee89b4;
+  --secondary: #E4468A;
+  --secondary-shade-15: #c11c63;
+  --secondary-shade-30: #7f1241;
+  --success-tint-30: #abf1ab;
+  --success-tint-15: #6ae66a;
+  --success: #28DB28;
+  --success-shade-15: #1a9c1a;
+  --success-shade-30: #0f5b0f;
+  --info-tint-30: #a6bbf1;
+  --info-tint-15: #6489e6;
+  --info: #2357DB;
+  --info-shade-15: #183d99;
+  --info-shade-30: #0e2357;
+  --warning-tint-30: #fff6ca;
+  --warning-tint-15: #feea7e;
+  --warning: #FEDD32;
+  --warning-shade-15: #e2be01;
+  --warning-shade-30: #967e01;
+  --error-tint-30: #eca4a4;
+  --error-tint-15: #df6565;
+  --error: #CC2B2B;
+  --error-shade-15: #8d1e1e;
+  --error-shade-30: #4e1010;
+  --text-dark: #000035;
+  --text-light: #eee;
+  --gray-tint-30: white;
+  --gray-tint-15: #f2f2f2;
+  --gray: #CCC;
+  --gray-shade-15: #a6a6a6;
+  --gray-shade-30: gray;
+}
+
