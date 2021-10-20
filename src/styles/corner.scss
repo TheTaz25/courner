@@ -1,0 +1,7 @@
+@mixin corners {
+  border-radius: 4px;
+
+  &.c-corner-tr {
+    border-top-right-radius: 16px;
+  }
+}

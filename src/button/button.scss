@@ -1,3 +1,57 @@
+@import '../styles/corner.scss';
 .c-button {
+  // Unstyle radius
+  border-radius: 0;
+  
+  // TODO: needs to be extracted into a variable with calculations (eg space(1))
   padding: 8px;
+  cursor: pointer;
+  border-style: solid;
+
+  @include corners;
+
+  &.c-button-gray {
+    border-color: var(--gray-shade-15);
+    background-color: var(--gray);
+  }
+  &.c-button-primary {
+    border-color: var(--primary-shade-15);
+    background-color: var(--primary);
+  }
+  &.c-button-secondary {
+    border-color: var(--secondary-shade-15);
+    background-color: var(--secondary);
+  }
+  &.c-button-success {
+    border-color: var(--success-shade-15);
+    background-color: var(--success);
+  }
+  &.c-button-warning {
+    border-color: var(--warning-shade-15);
+    background-color: var(--warning);
+  }
+  &.c-button-error {
+    border-color: var(--error-shade-15);
+    background-color: var(--error);
+  }
+  &.c-button-info {
+    border-color: var(--info-shade-15);
+    background-color: var(--info);
+  }
+
+  // Define variants AFTER themes so that bg color transparent cascades
+  &.c-button-default {
+    border-width: 0;
+    background-color: transparent;
+  }
+  &.c-button-filled {
+    border-width: 2px;
+  }
+  &.c-button-outlined {
+    border-width: 2px;
+    background-color: transparent;
+  }
+  &.c-button-light {
+    border-width: 2px;
+  }
 }
