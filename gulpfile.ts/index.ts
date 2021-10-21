@@ -1,4 +1,4 @@
-const { src, dest, series } = require('gulp');
+const { src, dest, series, parallel } = require('gulp');
 const del = require('del');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
@@ -9,7 +9,6 @@ function clean() {
 }
 
 function compileCss() {
-  console.log(process.env)
   return src('./src/**/*.scss')
     .pipe(sass({
       outputStyle: process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded',
@@ -38,17 +37,18 @@ function compileTypescript() {
 function compileDeclarations() {
   return src('./src/**/*.d.ts')
     .pipe(concat('courner.d.ts'))
-    .pipe(dest('./build/courner.d.ts'))
+    .pipe(dest('./build/'))
 }
 
 /*
   Task-ToDos:
   - [x] Gather and compile all scss into one css file
-  - [ ] Gather and compile all ts(x) files into one js file (esm/umd?)
-  - [ ] Gather all .d.ts and pack them into 1 global .d.ts file
+  - [x] Gather and compile all ts(x) files into one js file (esm/umd?)
+  - [x] Gather all .d.ts and pack them into 1 global .d.ts file
   - [ ] Optionally uglify ouput of 1 and 2
 */
 
+exports.all = series(clean, parallel(compileDeclarations, compileCss, compileTypescript))
 exports.dts = series(clean, compileDeclarations);
 exports.tsx = series(clean, compileTypescript);
 exports.css = series(clean, compileCss);
