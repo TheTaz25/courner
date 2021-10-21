@@ -1,4 +1,8 @@
 @import '../styles/corner.scss';
+
+$initial-deg: 45deg;
+$final-deg: 135deg;
+
 .c-button {
   // Unstyle radius
   border-radius: 0;
@@ -7,51 +11,83 @@
   padding: 8px;
   cursor: pointer;
   border-style: solid;
+  font-weight: bold;
+  font-size: 1rem;
 
   @include corners;
 
   &.c-button-gray {
     border-color: var(--gray-shade-15);
-    background-color: var(--gray);
+    background-image: linear-gradient($initial-deg, var(--gray-tint-15), var(--gray));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--gray-tint-15), var(--gray));
+    }
   }
   &.c-button-primary {
     border-color: var(--primary-shade-15);
-    background-color: var(--primary);
+    background-image: linear-gradient($initial-deg, var(--primary-tint-15), var(--primary));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--primary-tint-15), var(--primary));
+    }
   }
   &.c-button-secondary {
     border-color: var(--secondary-shade-15);
-    background-color: var(--secondary);
+    color: var(--text-light);
+    background-image: linear-gradient($initial-deg, var(--secondary-tint-15), var(--secondary));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--secondary-tint-15), var(--secondary));
+    }
   }
   &.c-button-success {
     border-color: var(--success-shade-15);
-    background-color: var(--success);
+    background-image: linear-gradient($initial-deg, var(--success-tint-15), var(--success));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--success-tint-15), var(--success));
+    }
   }
   &.c-button-warning {
     border-color: var(--warning-shade-15);
-    background-color: var(--warning);
+    background-image: linear-gradient($initial-deg, var(--warning-tint-15), var(--warning));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--warning-tint-15), var(--warning));
+    }
   }
   &.c-button-error {
     border-color: var(--error-shade-15);
-    background-color: var(--error);
+    color: var(--text-light);
+    background-image: linear-gradient($initial-deg, var(--error-tint-15), var(--error));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--error-tint-15), var(--error));
+    }
   }
   &.c-button-info {
     border-color: var(--info-shade-15);
-    background-color: var(--info);
+    color: var(--text-light);
+    background-image: linear-gradient($initial-deg, var(--info-tint-15), var(--info));
+    &:hover {
+      background-image: linear-gradient($final-deg, var(--info-tint-15), var(--info));
+    }
   }
 
   // Define variants AFTER themes so that bg color transparent cascades
   &.c-button-default {
     border-width: 0;
-    background-color: transparent;
+    background-color: unset;
+    color: var(--text-dark);
+    background-image: unset;
+    &:hover {
+      background-image: unset;
+    }
   }
   &.c-button-filled {
     border-width: 2px;
   }
   &.c-button-outlined {
     border-width: 2px;
-    background-color: transparent;
-  }
-  &.c-button-light {
-    border-width: 2px;
+    color: var(--text-dark);
+    background-image: unset;
+    &:hover {
+      background-image: unset;
+    }
   }
 }
