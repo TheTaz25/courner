@@ -1,4 +1,10 @@
-declare type ButtonVariants = 'default'
+declare module Courner {
+  type ButtonVariants = 'default'
   | 'outlined'
-  | 'filled'
-  | 'light'; 
+  | 'filled';
+
+interface ButtonProps {
+  variant?: ButtonVariants,
+  theme?: Theme,
+}
+}

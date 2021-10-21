@@ -2,19 +2,13 @@ import React from 'react';
 import cls from '../utils/cls';
 import './button.scss';
 
-interface ButtonProps {
-  variant?: ButtonVariants,
-  theme?: Theme,
-}
-
-const buttonVariants: Record<ButtonVariants, string> = {
+const buttonVariants: Record<Courner.ButtonVariants, string> = {
   default: 'c-button-default',
   filled: 'c-button-filled',
   outlined: 'c-button-outlined',
-  light: 'c-button-light',
 };
 
-const buttonThemes: Record<Theme, string> = {
+const buttonThemes: Record<Courner.Theme, string> = {
   default: 'c-button-gray',
   primary: 'c-button-primary',
   secondary: 'c-button-secondary',
@@ -24,7 +18,7 @@ const buttonThemes: Record<Theme, string> = {
   info: 'c-button-info',
 };
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<Courner.ButtonProps> = ({
   children,
   variant = 'default',
   theme = 'default',
