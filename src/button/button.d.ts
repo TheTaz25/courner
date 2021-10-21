@@ -1,1 +1,4 @@
-declare type ButtonVariants = 'default' | 'outlined' | 'filled' | 'light'; 
+declare type ButtonVariants = 'default'
+  | 'outlined'
+  | 'filled'
+  | 'light'; 
