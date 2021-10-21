@@ -22,12 +22,18 @@ $final-deg: 135deg;
     &:hover {
       background-image: linear-gradient($final-deg, var(--gray-tint-15), var(--gray));
     }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--gray);
+    }
   }
   &.c-button-primary {
     border-color: var(--primary-shade-15);
     background-image: linear-gradient($initial-deg, var(--primary-tint-15), var(--primary));
     &:hover {
       background-image: linear-gradient($final-deg, var(--primary-tint-15), var(--primary));
+    }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--primary);
     }
   }
   &.c-button-secondary {
@@ -37,6 +43,9 @@ $final-deg: 135deg;
     &:hover {
       background-image: linear-gradient($final-deg, var(--secondary-tint-15), var(--secondary));
     }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--secondary);
+    }
   }
   &.c-button-success {
     border-color: var(--success-shade-15);
@@ -44,12 +53,18 @@ $final-deg: 135deg;
     &:hover {
       background-image: linear-gradient($final-deg, var(--success-tint-15), var(--success));
     }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--success);
+    }
   }
   &.c-button-warning {
     border-color: var(--warning-shade-15);
     background-image: linear-gradient($initial-deg, var(--warning-tint-15), var(--warning));
     &:hover {
       background-image: linear-gradient($final-deg, var(--warning-tint-15), var(--warning));
+    }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--warning);
     }
   }
   &.c-button-error {
@@ -59,6 +74,9 @@ $final-deg: 135deg;
     &:hover {
       background-image: linear-gradient($final-deg, var(--error-tint-15), var(--error));
     }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--error);
+    }
   }
   &.c-button-info {
     border-color: var(--info-shade-15);
@@ -66,6 +84,9 @@ $final-deg: 135deg;
     background-image: linear-gradient($initial-deg, var(--info-tint-15), var(--info));
     &:hover {
       background-image: linear-gradient($final-deg, var(--info-tint-15), var(--info));
+    }
+    &.c-button-outlined, &.c-button-default {
+      color: var(--info);
     }
   }
 
@@ -84,10 +105,12 @@ $final-deg: 135deg;
   }
   &.c-button-outlined {
     border-width: 2px;
-    color: var(--text-dark);
+    background-color: unset;
     background-image: unset;
     &:hover {
       background-image: unset;
     }
+
+
   }
 }
