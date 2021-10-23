@@ -7,7 +7,7 @@ declare module Courner {
   | 'large'
   | 'small';
 
-  interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
+  interface ButtonProps extends Omit<React.HTMLProps<HTMLButtonElement>, 'size'> {
     variant?: ButtonVariants,
     theme?: Theme,
     size?: ButtonSizes,

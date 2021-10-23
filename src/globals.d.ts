@@ -1,5 +1,5 @@
 declare module Courner {
-  declare type Theme = 'default'
+  type Theme = 'default'
   | 'primary'
   | 'secondary'
   | 'warning'

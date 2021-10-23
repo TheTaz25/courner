@@ -34,7 +34,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build:css": "gulp css"
+    "build:css": "gulp css",
+    "build:all": "gulp all"
   },
   "peerDependencies": {
     "react": "^17.0.2",
