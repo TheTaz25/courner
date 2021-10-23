@@ -122,6 +122,11 @@ $final-deg: 135deg;
 
   &.c-button-small {
     padding: 4px;
+    font-size: 0.9rem;
     font-weight: 500;
+  }
+
+  &.c-button-block {
+    width: 100%;
   }
 }

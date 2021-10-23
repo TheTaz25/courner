@@ -11,7 +11,8 @@ declare module Courner {
     variant?: ButtonVariants,
     theme?: Theme,
     size?: ButtonSizes,
-    type?: AllowedButtonTypes
+    type?: AllowedButtonTypes,
+    block?: boolean,
   }
 
   type AllowedButtonTypes = 'button'

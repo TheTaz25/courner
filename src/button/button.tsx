@@ -30,7 +30,8 @@ const Button: React.FC<Courner.ButtonProps> = ({
   theme = 'default',
   size = 'medium',
   className,
-  type,
+  type = 'button',
+  block = false,
   ...props
 }) => {
   const buttonClasses = [
@@ -40,9 +41,10 @@ const Button: React.FC<Courner.ButtonProps> = ({
     buttonVariants[variant] ?? buttonVariants.default,
     buttonThemes[theme] ?? buttonThemes.default,
     buttonSizes[size] ?? buttonSizes.medium,
+    block ? 'c-button-block' : undefined,
   ];
   return (
-    <button type={type! || "button"} className={cls(buttonClasses)} {...props}>
+    <button type={type} className={cls(buttonClasses)} {...props}>
       {children}
     </button>
   );

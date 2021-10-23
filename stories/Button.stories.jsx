@@ -20,6 +20,9 @@ export default {
     size: {
       options: ['medium', 'large', 'small'],
       control: { type: 'radio' },
+    },
+    block: {
+      control: { type: 'boolean' }
     }
   },
 };
