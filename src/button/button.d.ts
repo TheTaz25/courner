@@ -3,8 +3,18 @@ declare module Courner {
   | 'outlined'
   | 'filled';
 
-interface ButtonProps {
-  variant?: ButtonVariants,
-  theme?: Theme,
-}
+  type ButtonSizes = 'medium'
+  | 'large'
+  | 'small';
+
+  interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
+    variant?: ButtonVariants,
+    theme?: Theme,
+    size?: ButtonSizes,
+    type?: AllowedButtonTypes
+  }
+
+  type AllowedButtonTypes = 'button'
+  | 'reset'
+  | 'submit'
 }

@@ -8,7 +8,6 @@ $final-deg: 135deg;
   border-radius: 0;
   
   // TODO: needs to be extracted into a variable with calculations (eg space(1))
-  padding: 8px;
   cursor: pointer;
   border-style: solid;
   font-weight: bold;
@@ -110,7 +109,19 @@ $final-deg: 135deg;
     &:hover {
       background-image: unset;
     }
+  }
+  
+  &.c-button-medium {
+    padding: 8px;
+  }
 
+  &.c-button-large {
+    padding: 16px;
+    font-size: 1.4rem;
+  }
 
+  &.c-button-small {
+    padding: 4px;
+    font-weight: 500;
   }
 }

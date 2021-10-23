@@ -18,19 +18,31 @@ const buttonThemes: Record<Courner.Theme, string> = {
   info: 'c-button-info',
 };
 
+const buttonSizes: Record<Courner.ButtonSizes, string> = {
+  medium: 'c-button-medium',
+  large: 'c-button-large',
+  small: 'c-button-small',
+};
+
 const Button: React.FC<Courner.ButtonProps> = ({
   children,
   variant = 'default',
   theme = 'default',
+  size = 'medium',
+  className,
+  type,
+  ...props
 }) => {
   const buttonClasses = [
+    className,
     'c-button',
     'c-corner-tr',
     buttonVariants[variant] ?? buttonVariants.default,
     buttonThemes[theme] ?? buttonThemes.default,
+    buttonSizes[size] ?? buttonSizes.medium,
   ];
   return (
-    <button type="button" className={cls(buttonClasses)}>
+    <button type={type! || "button"} className={cls(buttonClasses)} {...props}>
       {children}
     </button>
   );
