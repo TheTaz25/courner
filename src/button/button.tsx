@@ -1,14 +1,40 @@
-import React from 'react';
 import cls from '../utils/cls';
-import './button.scss';
 
-const buttonVariants: Record<Courner.ButtonVariants, string> = {
+type ButtonVariants = 'default'
+  | 'outlined'
+  | 'filled';
+
+type ButtonSizes = 'medium'
+| 'large'
+| 'small';
+
+export interface ButtonProps extends Omit<React.HTMLProps<HTMLButtonElement>, 'size'> {
+  variant?: ButtonVariants,
+  theme?: Theme,
+  size?: ButtonSizes,
+  type?: AllowedButtonTypes,
+  block?: boolean,
+}
+
+type AllowedButtonTypes = 'button'
+| 'reset'
+| 'submit';
+
+type Theme = 'default'
+| 'primary'
+| 'secondary'
+| 'warning'
+| 'error'
+| 'info'
+| 'success';
+
+const buttonVariants: Record<ButtonVariants, string> = {
   default: 'c-button-default',
   filled: 'c-button-filled',
   outlined: 'c-button-outlined',
 };
 
-const buttonThemes: Record<Courner.Theme, string> = {
+const buttonThemes: Record<Theme, string> = {
   default: 'c-button-gray',
   primary: 'c-button-primary',
   secondary: 'c-button-secondary',
@@ -18,13 +44,13 @@ const buttonThemes: Record<Courner.Theme, string> = {
   info: 'c-button-info',
 };
 
-const buttonSizes: Record<Courner.ButtonSizes, string> = {
+const buttonSizes: Record<ButtonSizes, string> = {
   medium: 'c-button-medium',
   large: 'c-button-large',
   small: 'c-button-small',
 };
 
-const Button: React.FC<Courner.ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'default',
   theme = 'default',

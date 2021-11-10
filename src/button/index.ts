@@ -1,5 +1,5 @@
 import Button from './button';
 
-export {
-  Button,
-};
+export { ButtonProps } from './button';
+
+export default Button;

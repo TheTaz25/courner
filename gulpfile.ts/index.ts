@@ -18,7 +18,7 @@ function compileCss() {
 }
 
 function compileTypescript() {
-  return src('./src/**/*.ts*')
+  return src(['./src/index.ts', './src/**/*.ts*'])
     .pipe(ts({
       target: 'es6',
       lib: ['es6', 'DOM'],
@@ -29,15 +29,10 @@ function compileTypescript() {
       esModuleInterop: true,
       forceConsistentCasingInFileNames: true,
       strict: true,
-      skipLibCheck: true
+      skipLibCheck: true,
+      declaration: true,
     }))
-    .pipe(dest('./build/components'))
-}
-
-function compileDeclarations() {
-  return src('./src/**/*.d.ts')
-    .pipe(concat('courner.d.ts'))
-    .pipe(dest('./build/'))
+    .pipe(dest('./build'))
 }
 
 /*
@@ -48,7 +43,6 @@ function compileDeclarations() {
   - [ ] Optionally uglify ouput of 1 and 2
 */
 
-exports.all = series(clean, parallel(compileDeclarations, compileCss, compileTypescript))
-exports.dts = series(clean, compileDeclarations);
+exports.all = series(clean, parallel(compileCss, compileTypescript))
 exports.tsx = series(clean, compileTypescript);
 exports.css = series(clean, compileCss);
