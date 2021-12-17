@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Button } from '../src/button';
+import { Button } from '../src/';
 import '../src/styles/colorTheme.scss';
+import '../src/button/button.scss';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -23,6 +24,10 @@ export default {
     },
     block: {
       control: { type: 'boolean' }
+    },
+    type: {
+      options: ['button'],
+      control: { type: 'radio' }
     }
   },
 };
@@ -34,4 +39,5 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   children: 'Button',
+  type: 'button'
 };
