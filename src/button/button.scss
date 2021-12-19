@@ -1,19 +1,15 @@
 @import '../styles/corner.scss';
 
-$initial-deg: 45deg;
-$final-deg: 135deg;
-
 .c-button {
   // TODO: needs to be extracted into a variable with calculations (eg space(1))
   cursor: pointer;
-  border-style: unset;
   font-weight: bold;
-  font-size: 1rem;
-
+  
   @include corners;
-
+  
   &.c-button-medium {
     padding: 12px;
+    font-size: 1rem;
   }
 
   &.c-button-large {

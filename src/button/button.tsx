@@ -52,6 +52,7 @@ const Button: React.FC<ButtonProps> = ({
     className,
     'c-button',
     'c-corner-tr',
+    'c-interactive',
     getThemeVariant(theme, variant),
     buttonSizes[size] ?? buttonSizes.medium,
     block ? 'c-button-block' : undefined,

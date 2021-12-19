@@ -14,13 +14,31 @@
 
 @mixin fillsAndOutlines($color-name, $color) {
   .c-fill-#{$color-name} {
+    border: none;
     background-color: var(--#{$color-name});
     color: getBestContrast(luminance($color), ($text-dark, $text-light));
+    &.c-interactive {
+      &:hover {
+        background-color: var(--#{$color-name}-tint-15);
+      }
+      &:active {
+        background-color: var(--#{$color-name}-tint-30);
+      }
+    }
   }
   .c-outline-#{$color-name} {
     border: var(--#{$color-name}-shade-15) 2px solid;
     color: var(--#{$color-name});
     background-color: unset;
+    &.c-interactive {
+      &:hover {
+        background-color: var(--#{$color-name}-tint-30);
+      }
+      &:active {
+        background-color: var(--#{$color-name}-tint-30);
+        border-color: var(--#{$color-name}-tint-15);
+      }
+    }
   }
 }
 
