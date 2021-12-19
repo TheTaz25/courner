@@ -1,8 +1,7 @@
 import cls from '../utils/cls';
 
 type ButtonVariants = 'default'
-  | 'outlined'
-  | 'filled';
+  | 'outlined';
 
 type ButtonSizes = 'medium'
 | 'large'
@@ -23,31 +22,20 @@ type AllowedButtonTypes = 'button'
 type Theme = 'default'
 | 'primary'
 | 'secondary'
-| 'warning'
+| 'warn'
 | 'error'
 | 'info'
 | 'success';
-
-const buttonVariants: Record<ButtonVariants, string> = {
-  default: 'c-button-default',
-  filled: 'c-button-filled',
-  outlined: 'c-button-outlined',
-};
-
-const buttonThemes: Record<Theme, string> = {
-  default: 'c-button-gray',
-  primary: 'c-button-primary',
-  secondary: 'c-button-secondary',
-  success: 'c-button-success',
-  warning: 'c-button-warning',
-  error: 'c-button-error',
-  info: 'c-button-info',
-};
 
 const buttonSizes: Record<ButtonSizes, string> = {
   medium: 'c-button-medium',
   large: 'c-button-large',
   small: 'c-button-small',
+};
+
+const getThemeVariant = (theme: Theme, variant: ButtonVariants) => {
+  const variantModulation = variant === 'default' ? 'fill' : 'outline';
+  return `c-${variantModulation}-${theme}`;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -64,8 +52,7 @@ const Button: React.FC<ButtonProps> = ({
     className,
     'c-button',
     'c-corner-tr',
-    buttonVariants[variant] ?? buttonVariants.default,
-    buttonThemes[theme] ?? buttonThemes.default,
+    getThemeVariant(theme, variant),
     buttonSizes[size] ?? buttonSizes.medium,
     block ? 'c-button-block' : undefined,
   ];

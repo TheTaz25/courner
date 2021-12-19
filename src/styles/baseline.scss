@@ -1,0 +1,11 @@
+@import './variables.scss';
+@import './util.scss';
+@import './colorTheme.scss';
+
+@each $name, $value in $courner-name-to-color {
+  @include fillsAndOutlines($name, $value);
+}
+
+.c-interactive {
+  transition: all 300ms ease-in-out;
+}

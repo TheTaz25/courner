@@ -1,64 +1,22 @@
-// TODO: Have some generator publicly available to generate Themes
-// TODO: should maybe generate this through gulp?
-$primary: #1ACC85;
-$secondary: #E4468A;
-$info: #2357DB;
-$warn: #FEDD32;
-$error: #CC2B2B;
-$success: #28DB28;
-$gray: #CCC;
+@import './variables.scss';
+@import './util.scss';
+
+$courner-colors: ("primary", "secondary", "gray", "info", "success", "warning", "error");
+$courner-name-to-color: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "success": $success,
+  "info": $info,
+  "warning": $warn,
+  "error": $error,
+);
 
 :root {
-  // Primary Color
-  --primary-tint-30: #{lighten($primary, 30%)};
-  --primary-tint-15: #{lighten($primary, 15%)};
-  --primary: #{$primary};
-  --primary-shade-15: #{darken($primary, 15%)};
-  --primary-shade-30: #{darken($primary, 30%)};
-
-  // Secondary Color
-  --secondary-tint-30: #{lighten($secondary, 30%)};
-  --secondary-tint-15: #{lighten($secondary, 15%)};
-  --secondary: #{$secondary};
-  --secondary-shade-15: #{darken($secondary, 15%)};
-  --secondary-shade-30: #{darken($secondary, 30%)};
-
-  // Success Color
-  --success-tint-30: #{lighten($success, 30%)};
-  --success-tint-15: #{lighten($success, 15%)};
-  --success: #{$success};
-  --success-shade-15: #{darken($success, 15%)};
-  --success-shade-30: #{darken($success, 30%)};
-
-  // Info Color
-  --info-tint-30: #{lighten($info, 30%)};
-  --info-tint-15: #{lighten($info, 15%)};
-  --info: #{$info};
-  --info-shade-15: #{darken($info, 15%)};
-  --info-shade-30: #{darken($info, 30%)};
-
-  // Warning Color
-  --warning-tint-30: #{lighten($warn, 30%)};
-  --warning-tint-15: #{lighten($warn, 15%)};
-  --warning: #{$warn};
-  --warning-shade-15: #{darken($warn, 15%)};
-  --warning-shade-30: #{darken($warn, 30%)};
-
-  // Error Color
-  --error-tint-30: #{lighten($error, 30%)};
-  --error-tint-15: #{lighten($error, 15%)};
-  --error: #{$error};
-  --error-shade-15: #{darken($error, 15%)};
-  --error-shade-30: #{darken($error, 30%)};
-
+  @each $color-name in $courner-colors {
+    @include tintsAndShades($color-name, map-get($courner-name-to-color, $color-name));
+  }
   // Text Colors
   --text-dark: #000035;
   --text-light: #eee;
-
-  // Gray Shades
-  --gray-tint-30: #{lighten($gray, 30%)};
-  --gray-tint-15: #{lighten($gray, 15%)};
-  --gray: #{$gray};
-  --gray-shade-15: #{darken($gray, 15%)};
-  --gray-shade-30: #{darken($gray, 30%)};
 }

@@ -4,124 +4,25 @@ $initial-deg: 45deg;
 $final-deg: 135deg;
 
 .c-button {
-  // Unstyle radius
-  border-radius: 0;
-  
   // TODO: needs to be extracted into a variable with calculations (eg space(1))
   cursor: pointer;
-  border-style: solid;
+  border-style: unset;
   font-weight: bold;
   font-size: 1rem;
 
   @include corners;
 
-  &.c-button-gray {
-    border-color: var(--gray-shade-15);
-    background-image: linear-gradient($initial-deg, var(--gray-tint-15), var(--gray));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--gray-tint-15), var(--gray));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--gray);
-    }
-  }
-  &.c-button-primary {
-    border-color: var(--primary-shade-15);
-    background-image: linear-gradient($initial-deg, var(--primary-tint-15), var(--primary));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--primary-tint-15), var(--primary));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--primary);
-    }
-  }
-  &.c-button-secondary {
-    border-color: var(--secondary-shade-15);
-    color: var(--text-light);
-    background-image: linear-gradient($initial-deg, var(--secondary-tint-15), var(--secondary));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--secondary-tint-15), var(--secondary));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--secondary);
-    }
-  }
-  &.c-button-success {
-    border-color: var(--success-shade-15);
-    background-image: linear-gradient($initial-deg, var(--success-tint-15), var(--success));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--success-tint-15), var(--success));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--success);
-    }
-  }
-  &.c-button-warning {
-    border-color: var(--warning-shade-15);
-    background-image: linear-gradient($initial-deg, var(--warning-tint-15), var(--warning));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--warning-tint-15), var(--warning));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--warning);
-    }
-  }
-  &.c-button-error {
-    border-color: var(--error-shade-15);
-    color: var(--text-light);
-    background-image: linear-gradient($initial-deg, var(--error-tint-15), var(--error));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--error-tint-15), var(--error));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--error);
-    }
-  }
-  &.c-button-info {
-    border-color: var(--info-shade-15);
-    color: var(--text-light);
-    background-image: linear-gradient($initial-deg, var(--info-tint-15), var(--info));
-    &:hover {
-      background-image: linear-gradient($final-deg, var(--info-tint-15), var(--info));
-    }
-    &.c-button-outlined, &.c-button-default {
-      color: var(--info);
-    }
-  }
-
-  // Define variants AFTER themes so that bg color transparent cascades
-  &.c-button-default {
-    border-width: 0;
-    background-color: unset;
-    color: var(--text-dark);
-    background-image: unset;
-    &:hover {
-      background-image: unset;
-    }
-  }
-  &.c-button-filled {
-    border-width: 2px;
-  }
-  &.c-button-outlined {
-    border-width: 2px;
-    background-color: unset;
-    background-image: unset;
-    &:hover {
-      background-image: unset;
-    }
-  }
-  
   &.c-button-medium {
-    padding: 8px;
+    padding: 12px;
   }
 
   &.c-button-large {
-    padding: 16px;
+    padding: 24px;
     font-size: 1.4rem;
   }
 
   &.c-button-small {
-    padding: 4px;
+    padding: 8px;
     font-size: 0.9rem;
     font-weight: 500;
   }

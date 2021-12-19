@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from '../src/';
 import '../src/styles/colorTheme.scss';
+import '../src/styles/baseline.scss';
 import '../src/button/button.scss';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -15,7 +16,7 @@ export default {
       control: { type: 'select' },
     },
     variant: {
-      options: ['default', 'filled', 'outlined'],
+      options: ['default', 'outlined'],
       control: { type: 'radio' }
     },
     size: {
@@ -26,7 +27,7 @@ export default {
       control: { type: 'boolean' }
     },
     type: {
-      options: ['button'],
+      options: ['button', 'submit', 'reset'],
       control: { type: 'radio' }
     }
   },
@@ -39,5 +40,9 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   children: 'Button',
-  type: 'button'
+  type: 'button',
+  block: false,
+  size: 'medium',
+  theme: 'default',
+  variant: 'default',
 };

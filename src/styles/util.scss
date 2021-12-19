@@ -1,0 +1,112 @@
+@use 'sass:math';
+/**
+  Use to generate the css-color-variables
+  $color-name: the name of the color that is used as the variable name
+  $color: the actual color that is used to calculate the tints and shades
+*/
+@mixin tintsAndShades($color-name, $color) {
+  --#{$color-name}-tint-30: #{lighten($color, 30%)};
+  --#{$color-name}-tint-15: #{lighten($color, 15%)};
+  --#{$color-name}: #{$color};
+  --#{$color-name}-shade-15: #{darken($color, 15%)};
+  --#{$color-name}-shade-30: #{darken($color, 30%)};
+};
+
+@mixin fillsAndOutlines($color-name, $color) {
+  .c-fill-#{$color-name} {
+    background-color: var(--#{$color-name});
+    color: getBestContrast(luminance($color), ($text-dark, $text-light));
+  }
+  .c-outline-#{$color-name} {
+    border: var(--#{$color-name}-shade-15) 2px solid;
+    color: var(--#{$color-name});
+    background-color: unset;
+  }
+}
+
+// From https://css-tricks.com/snippets/sass/power-function/#positive-or-negative-integer-exponents
+@function gcd($a, $b) {
+  // From: http://rosettacode.org/wiki/Greatest_common_divisor#JavaScript
+  @if ($b != 0) {
+    @return gcd($b, $a % $b);
+  } @else {
+    @return abs($a);
+  }
+}
+
+@function pow($base, $exponent, $prec: 12) {
+  // Handles decimal exponents by trying to convert them into a fraction and then use a nthRoot-algorithm for parts of the calculation
+  @if (floor($exponent) != $exponent) {
+    $prec2 : pow(10, $prec);
+    $exponent: round($exponent * $prec2);
+    $denominator: gcd($exponent, $prec2);
+    @return nthRoot(pow($base, math.div($exponent, $denominator)), math.div($prec2, $denominator), $prec);
+  }
+
+  $value: $base;
+  @if $exponent > 1 {
+    @for $i from 2 through $exponent {
+      $value: $value * $base;
+    }
+  } @else if $exponent < 1 {
+    @for $i from 0 through -$exponent {
+      $value: $value / $base;
+    }
+  }
+
+  @return $value;
+}
+
+@function nthRoot($num, $n: 2, $prec: 12) {
+  // From: http://rosettacode.org/wiki/Nth_root#JavaScript
+  $x: 1;
+
+  @for $i from 0 through $prec {
+    $x: math.div(1, $n) * (($n - 1) * $x + math.div($num, pow($x, $n - 1)));
+  }
+
+  @return $x;
+}
+
+// From https://css-tricks.com/snippets/sass/luminance-color-function/#code
+@function luminance($color) {
+  $colors: (
+    'red': red($color),
+    'green': green($color),
+    'blue': blue($color),
+  );
+
+  @each $name, $value in $colors {
+    $adjusted: 0;
+    $value: math.div($value, 255);
+
+    @if $value < 0.03928 {
+      $value: math.div($value, 12.92);
+    } @else {
+      $value: math.div(($value + 0.055), 1.055);
+      $value: pow($value, 2.4);
+    }
+
+    $colors: map-merge($colors, ($name: $value));
+  }
+
+  @return (
+    (map-get($colors, 'red') * .2126) +
+    (map-get($colors, 'green') * .7152) +
+    (map-get($colors, 'blue') * .0722)
+  );
+}
+
+@function getBestContrast($luminance, $color-list) {
+  $best: '';
+  $best-luminance: 0;
+  @each $color in $color-list {
+    $calculated-luminance: luminance($color);
+    $distance: abs($luminance - $calculated-luminance);
+    @if ($best-luminance < $distance) {
+      $best-luminance: $distance;
+      $best: $color;
+    }
+  }
+  @return $best;
+}
