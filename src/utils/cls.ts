@@ -3,7 +3,7 @@ const cls = (classes: Array<string | undefined>) => classes.filter((c) => !!c).j
 export default cls;
 
 interface ClassNamesObject {
-  [key: string]: boolean,
+  [key: string]: boolean | undefined,
 }
 
 const classNames = (classes: ClassNamesObject, additionalClassNames?: string) => {
