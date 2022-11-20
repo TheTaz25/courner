@@ -28,7 +28,7 @@
   }
   .c-outline-#{$color-name} {
     border: var(--#{$color-name}-shade-15) 2px solid;
-    color: var(--#{$color-name});
+    color: var(--#{$color-name}-shade-15);
     background-color: unset;
     &.c-interactive {
       &:hover {

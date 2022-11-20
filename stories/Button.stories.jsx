@@ -12,7 +12,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     theme: {
-      options: ['primary', 'secondary', 'success', 'warning', 'info', 'error', 'default'],
+      options: ['primary', 'secondary', 'success', 'warning', 'info', 'error'],
       control: { type: 'select' },
     },
     variant: {
@@ -43,6 +43,6 @@ Primary.args = {
   type: 'button',
   block: false,
   size: 'medium',
-  theme: 'default',
+  theme: 'primary',
   variant: 'default',
 };

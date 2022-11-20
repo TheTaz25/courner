@@ -19,8 +19,7 @@ type AllowedButtonTypes = 'button'
 | 'reset'
 | 'submit';
 
-type Theme = 'default'
-| 'primary'
+type Theme = 'primary'
 | 'secondary'
 | 'warn'
 | 'error'
@@ -41,7 +40,7 @@ const getThemeVariant = (theme: Theme, variant: ButtonVariants) => {
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'default',
-  theme = 'default',
+  theme = 'primary',
   size = 'medium',
   className,
   type = 'button',
