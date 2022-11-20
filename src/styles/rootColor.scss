@@ -1,0 +1,10 @@
+@import './colorTheme.scss';
+
+:root {
+  @each $color-name in $courner-colors {
+    @include tintsAndShades($color-name, map-get($courner-name-to-color, $color-name));
+  }
+  // Text Colors
+  --text-dark: #000035;
+  --text-light: #eee;
+}
