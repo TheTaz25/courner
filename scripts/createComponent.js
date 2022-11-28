@@ -40,10 +40,9 @@ export default ${componentName}
 `;
 
   const entryAddition = `@import './${componentDirName}/${componentDirName}.scss;
-  `;
+`;
   const indexAddition = `export type { ${componentName}Props } from './${componentDirName}';
-  export { default as ${componentName} } from './${componentDirName}';
-
+export { default as ${componentName} } from './${componentDirName}';
 `;
 
   try {
