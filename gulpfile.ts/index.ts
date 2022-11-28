@@ -11,7 +11,7 @@ function clean() {
 function compileCss() {
   return src('./src/**/*.scss')
     .pipe(sass({
-      outputStyle: process.env.NODE_ENV === 'production' ? 'compressed' : 'expanded',
+      outputStyle: 'compressed',
     }).on('error', sass.logError))
     .pipe(concat('styles.css'))
     .pipe(dest('./build'))

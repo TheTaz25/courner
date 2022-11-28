@@ -1,16 +1,4 @@
 @use 'sass:math';
-/**
-  Use to generate the css-color-variables
-  $color-name: the name of the color that is used as the variable name
-  $color: the actual color that is used to calculate the tints and shades
-*/
-@mixin tintsAndShades($color-name, $color) {
-  --#{$color-name}-tint-30: #{lighten($color, 30%)};
-  --#{$color-name}-tint-15: #{lighten($color, 15%)};
-  --#{$color-name}: #{$color};
-  --#{$color-name}-shade-15: #{darken($color, 15%)};
-  --#{$color-name}-shade-30: #{darken($color, 30%)};
-};
 
 @mixin fillsAndOutlines($color-name, $color) {
   .c-fill-#{$color-name} {

@@ -8,17 +8,17 @@
   @include corners;
   
   &.c-button-medium {
-    padding: 12px;
+    padding: 1rem;
     font-size: 1rem;
   }
 
   &.c-button-large {
-    padding: 24px;
+    padding: 1.5rem;
     font-size: 1.4rem;
   }
 
   &.c-button-small {
-    padding: 8px;
+    padding: 0.5rem;
     font-size: 0.9rem;
     font-weight: 500;
   }
