@@ -1,5 +1,5 @@
 import Flex from './flexContainer';
 
-export { FlexProps } from './flexContainer';
+export type { FlexProps } from './flexContainer';
 
 export default Flex;
