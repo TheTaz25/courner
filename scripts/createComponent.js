@@ -8,7 +8,7 @@ module.exports = async function() {
   const srcPath = path.join(basePath, 'src');
   const storiesPath = path.join(basePath, 'stories');
 
-  const firstLetterOfComponent = componentName.charAt(0);
+  const firstLetterOfComponent = componentName.charAt(0).toLowerCase();
   const componentDirName = firstLetterOfComponent + componentName.substring(1);
 
   const componentPath = path.join(srcPath, componentDirName);
