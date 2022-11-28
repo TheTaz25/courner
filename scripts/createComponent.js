@@ -29,19 +29,21 @@ const ${componentName} = forwardRef<HTMLDivElement, ${componentName}Props>(({
   );
 });
 
-export default ${componentName}
-  `
+export default ${componentName};
+`
 
   const indexTemplate = `import ${componentName} from './${componentDirName}';
 
 export type { ${componentName}Props } from './${componentDirName}';
 
-export default ${componentName}
+export default ${componentName};
 `;
 
-  const entryAddition = `@import './${componentDirName}/${componentDirName}.scss;
+  const entryAddition = `
+@import './${componentDirName}/${componentDirName}.scss';
 `;
-  const indexAddition = `export type { ${componentName}Props } from './${componentDirName}';
+  const indexAddition = `
+export type { ${componentName}Props } from './${componentDirName}';
 export { default as ${componentName} } from './${componentDirName}';
 `;
 
