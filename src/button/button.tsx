@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import cls from '../utils/cls';
 
 type ButtonVariants = 'default'
@@ -37,7 +38,7 @@ const getThemeVariant = (theme: Theme, variant: ButtonVariants) => {
   return `c-${variantModulation}-${theme}`;
 };
 
-const Button: React.FC<ButtonProps> = ({
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   children,
   variant = 'default',
   theme = 'primary',
@@ -46,7 +47,7 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
   block = false,
   ...props
-}) => {
+}, ref) => {
   const buttonClasses = [
     className,
     'c-button',
@@ -57,10 +58,10 @@ const Button: React.FC<ButtonProps> = ({
     block ? 'c-button-block' : undefined,
   ];
   return (
-    <button type={type} className={cls(buttonClasses)} {...props}>
+    <button ref={ref} type={type} className={cls(buttonClasses)} {...props}>
       {children}
     </button>
   );
-};
+});
 
 export default Button;
