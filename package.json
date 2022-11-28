@@ -39,7 +39,7 @@
     "clear:build": "npx del ./build",
     "build:css": "npx sass ./src/entry.scss ./build/styles.css",
     "build:css:prod": "npx sass ./src/entry.scss ./build/styles.css --style compressed",
-    "build:ts": "npx tsc ./src/**/index.ts"
+    "build:ts": "npx tsc"
   },
   "peerDependencies": {
     "react": "^17.0.2",
