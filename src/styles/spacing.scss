@@ -1,0 +1,48 @@
+$spaces: (
+  1, 2, 3, 4, 8, 16,
+);
+
+@each $space in $spaces {
+  .c-margin-#{$space}x {
+    margin: #{$space}rem;
+  }
+  .c-margin-vertical-#{$space}x {
+    margin: #{$space}rem 0;
+  }
+  .c-margin-horizontal-#{$space}x {
+    margin: 0 #{$space}rem;
+  }
+  .c-margin-left-#{$space}x {
+    margin-left: #{$space}rem;
+  }
+  .c-margin-right-#{$space}x {
+    margin-right: #{$space}rem;
+  }
+  .c-margin-top-#{$space}x {
+    margin-top: #{$space}rem;
+  }
+  .c-margin-bottom-#{$space}x {
+    margin-bottom: #{$space}rem;
+  }
+  .c-padding-#{$space}x {
+    padding: #{$space}rem;
+  }
+  .c-padding-vertical-#{$space}x {
+    padding: #{$space}rem 0;
+  }
+  .c-padding-horizontal-#{$space}x {
+    padding: 0 #{$space}rem;
+  }
+  .c-padding-left-#{$space}x {
+    padding-left: #{$space}rem;
+  }
+  .c-padding-right-#{$space}x {
+    padding-right: #{$space}rem;
+  }
+  .c-padding-top-#{$space}x {
+    padding-top: #{$space}rem;
+  }
+  .c-padding-bottom-#{$space}x {
+    padding-bottom: #{$space}rem;
+  }
+}
