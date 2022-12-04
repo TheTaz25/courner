@@ -1,9 +1,6 @@
 import React from 'react';
 
 import { Button } from '../src/';
-import '../src/styles/colorTheme.scss';
-import '../src/styles/baseline.scss';
-import '../src/button/button.scss';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -36,9 +33,9 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const CournerButton = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+CournerButton.args = {
   children: 'Button',
   type: 'button',
   block: false,

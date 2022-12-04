@@ -6,7 +6,7 @@ const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(({
   ...props
 }, ref) => {
   return (
-    <p ref={ref}>
+    <p {...props} className={['c-typo', 'c-paragraph', props.className].join(' ')} ref={ref}>
       {children}
     </p>
   );
