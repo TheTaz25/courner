@@ -9,6 +9,6 @@ const PTemplate = (args) => <ParagraphComponent {...args}>
 export const Paragraph = PTemplate.bind({});
 
 export default {
-  title: 'Example/Typography',
+  title: 'Data Display/Atomic/Typography',
   component: ParagraphComponent
 }

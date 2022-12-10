@@ -15,8 +15,12 @@ const HTemplate = (args) => (
 
 export const Title = HTemplate.bind({});
 
+Title.args = {
+  visualLevel: 'title'
+}
+
 export default {
-  title: 'Example/Typography',
+  title: 'Data Display/Atomic/Typography',
   component: TitleComponent,
   argTypes: {
     visualLevel: {
