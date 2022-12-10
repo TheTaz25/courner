@@ -1,0 +1,24 @@
+@import '../styles/corner.scss';
+
+.c-input {
+  @include corners;
+  padding: 0.5rem;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--gray);
+  transition: border-color 200ms ease-in-out;
+
+  &.c-primary {
+    &:focus {
+      border-color: var(--primary);
+      border-width: 2px;
+    }
+  }
+  &.c-secondary {
+    &:focus {
+      border-color: var(--secondary);
+      border-width: 2px;
+    }
+  }
+}
