@@ -3,7 +3,7 @@ import React from 'react';
 import { Input } from '../src/';
 
 export default {
-  title: 'Atomic/Data Entry/Input',
+  title: 'Data Entry/Atomic/Input',
   component: Input,
   argTypes: {
     theme: {
