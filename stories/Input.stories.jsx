@@ -12,6 +12,9 @@ export default {
     },
     hasError: {
       control: { type: 'boolean' }
+    },
+    placeholder: {
+      control: { type: 'text' }
     }
   }
 };

@@ -8,6 +8,7 @@
   border-style: solid;
   border-color: var(--gray);
   transition: border-color 200ms ease-in-out;
+  font-size: 1rem;
 
   &.c-error {
     border-color: var(--error);
