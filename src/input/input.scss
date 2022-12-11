@@ -9,16 +9,18 @@
   border-color: var(--gray);
   transition: border-color 200ms ease-in-out;
 
+  &.c-error {
+    border-color: var(--error);
+  }
+
   &.c-primary {
-    &:focus {
+    &:not(.c-error):focus {
       border-color: var(--primary);
-      border-width: 2px;
     }
   }
   &.c-secondary {
-    &:focus {
+    &:not(.c-error):focus {
       border-color: var(--secondary);
-      border-width: 2px;
     }
   }
 }

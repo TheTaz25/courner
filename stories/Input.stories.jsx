@@ -9,6 +9,9 @@ export default {
     theme: {
       options: ['primary', 'secondary'],
       control: { type: 'radio' }
+    },
+    hasError: {
+      control: { type: 'boolean' }
     }
   }
 };
@@ -18,5 +21,6 @@ const Template = (args) => <Input {...args} />;
 export const CournerInput = Template.bind({});
 
 CournerInput.args = {
-  theme: 'primary'
+  theme: 'primary',
+  hasError: false,
 };

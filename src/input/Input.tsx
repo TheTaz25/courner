@@ -4,6 +4,7 @@ import { classNames } from '../utils/cls';
 
 export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   theme?: Theme,
+  hasError?: boolean
 }
 
 type Theme =
@@ -13,12 +14,14 @@ type Theme =
 const Input = forwardRef<HTMLInputElement, InputProps>(({
   children,
   className,
+  hasError,
   theme = 'primary',
   ...props
 }, ref) => {
   const classes = classNames({
     'c-input': true,
     'c-corner-tr': true,
+    'c-error': hasError,
     [`c-${theme}`]: true,
   }, className);
 
