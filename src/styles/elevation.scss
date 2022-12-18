@@ -1,0 +1,26 @@
+.c-elevation {
+  &-low {
+    box-shadow:
+      0.3px 0.3px 0.6px -23px rgba(0, 0, 0, 0.397),
+      0.9px 0.9px 1.5px -23px rgba(0, 0, 0, 0.467),
+      1.8px 1.8px 3px -23px rgba(0, 0, 0, 0.48),
+      3.7px 3.7px 6.2px -23px rgba(0, 0, 0, 0.566),
+      10px 10px 17px -23px rgba(0, 0, 0, 1);
+  }
+  &-mid {
+    box-shadow:
+      0.9px 0.9px 1.4px -31px rgba(0, 0, 0, 0.397),
+      2.2px 2.2px 3.5px -31px rgba(0, 0, 0, 0.467),
+      4.4px 4.4px 7.1px -31px rgba(0, 0, 0, 0.48),
+      9.1px 9.1px 14.6px -31px rgba(0, 0, 0, 0.566),
+      25px 25px 40px -31px rgba(0, 0, 0, 1);
+  }
+  &-high {
+    box-shadow:
+      1.4px 1.4px 2.8px -70px rgba(0, 0, 0, 0.397),
+      3.5px 3.5px 7.1px -70px rgba(0, 0, 0, 0.467),
+      7.1px 7.1px 14.5px -70px rgba(0, 0, 0, 0.48),
+      14.6px 14.6px 29.9px -70px rgba(0, 0, 0, 0.566),
+      40px 40px 82px -70px rgba(0, 0, 0, 1);
+  }
+}

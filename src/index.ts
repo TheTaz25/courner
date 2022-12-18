@@ -9,3 +9,6 @@ export { Paragraph, Title, Accessory } from './typography';
 
 export { InputCoreProps } from './inputCore';
 export { default as InputCore } from './inputCore';
+
+export { PaperProps } from './paper';
+export { default as Paper } from './paper';
