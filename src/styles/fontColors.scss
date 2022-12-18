@@ -1,0 +1,29 @@
+.c-font-color {
+  &-primary {
+    color: var(--primary);
+  }
+
+  &-secondary {
+    color: var(--secondary);
+  }
+
+  &-grey {
+    color: var(--gray);
+  }
+
+  &-info {
+    color: var(--info);
+  }
+
+  &-success {
+    color: var(--success-shade-15);
+  }
+
+  &-warning {
+    color: var(--warning-shade-15);
+  }
+
+  &-error {
+    color: var(--error);
+  }
+}

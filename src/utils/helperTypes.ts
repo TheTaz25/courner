@@ -1,0 +1,1 @@
+export type Optional<X> = X | undefined | null;
