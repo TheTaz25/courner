@@ -2,7 +2,7 @@ import React from 'react';
 import { forwardRef } from 'react';
 import { classNames } from '../utils/cls';
 
-export interface InputProps extends React.HTMLProps<HTMLInputElement> {
+export interface InputCoreProps extends React.HTMLProps<HTMLInputElement> {
   theme?: Theme,
   hasError?: boolean
 }
@@ -11,7 +11,7 @@ type Theme =
 | 'primary'
 | 'secondary';
 
-const Input = forwardRef<HTMLInputElement, InputProps>(({
+const InputCore = forwardRef<HTMLInputElement, InputCoreProps>(({
   children,
   className,
   hasError,
@@ -30,4 +30,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   )
 });
 
-export default Input;
+export default InputCore;
