@@ -1,5 +1,5 @@
-import Paper from './Paper';
+import Paper from './paper';
 
-export type { PaperProps } from './Paper';
+export type { PaperProps } from './paper';
 
 export default Paper;
