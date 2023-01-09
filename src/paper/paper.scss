@@ -2,6 +2,7 @@
 
 .c-paper {
   @include corners;
+  display: inline-block;
   background-color: var(--white);
   padding: 1rem;
 }

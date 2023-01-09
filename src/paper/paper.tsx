@@ -18,6 +18,7 @@ const Paper = forwardRef<HTMLDivElement, PaperProps>(({
   const classes = classNames({
     'c-paper': true,
     'c-corner-tr': true,
+    'c-interactive': interactive, 
     [getElevationClass(elevation)]: !!elevation,
   }, className);
   return (

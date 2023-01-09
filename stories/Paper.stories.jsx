@@ -9,7 +9,9 @@ const Template = (args) => (
 );
 
 export const PaperComponent = Template.bind({});
-PaperComponent.args = {};
+PaperComponent.args = {
+  elevation: 'low',
+};
 
 export default {
   title: 'Data Display/Atomic/Paper',
