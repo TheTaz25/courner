@@ -1,13 +1,14 @@
 import { Optional } from './helperTypes';
 
 export type Elevation =
+| 'none'
 | 'low'
 | 'mid'
 | 'high';
 
 const getElevationClass = (elevation: Optional<Elevation>) => {
   if (!elevation) {
-    return 'undefined';
+    return '';
   }
   return `c-elevation-${elevation}`;
 };

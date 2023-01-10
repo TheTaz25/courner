@@ -10,7 +10,7 @@ const Template = (args) => (
 
 export const PaperComponent = Template.bind({});
 PaperComponent.args = {
-  elevation: 'low',
+  elevation: 'none',
 };
 
 export default {
@@ -18,10 +18,13 @@ export default {
   component: Paper,
   argTypes: {
     elevation: {
-      options: ['low', 'mid', 'high'],
+      options: ['none', 'low', 'mid', 'high'],
       control: { type: 'radio' }
     },
     interactive: {
+      control: { type: 'boolean' }
+    },
+    bordered: {
       control: { type: 'boolean' }
     }
   }

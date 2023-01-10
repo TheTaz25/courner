@@ -5,4 +5,8 @@
   display: inline-block;
   background-color: var(--white);
   padding: 1rem;
+
+  &.c-bordered {
+    border: 1px solid var(--gray-tint-30);
+  }
 }
