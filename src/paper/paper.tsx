@@ -21,7 +21,6 @@ const Paper = forwardRef<HTMLDivElement, PaperProps>(({
     'c-paper': true,
     'c-corner-tr': true,
     'c-interactive': interactive, 
-    'c-transition_medium': true,
     'c-bordered': bordered,
     [getElevationClass(elevation)]: !!elevation,
   }, className);

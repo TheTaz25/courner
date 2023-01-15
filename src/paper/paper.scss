@@ -5,8 +5,9 @@
   display: inline-block;
   background-color: var(--white);
   padding: 1rem;
+  transition: box-shadow 250ms ease;
 
   &.c-bordered {
-    border: 1px solid var(--gray-tint-30);
+    outline: 1px solid var(--gray-tint-30);
   }
 }
