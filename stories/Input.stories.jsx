@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Input } from '../src/';
+import { InputCore } from '../src/';
 
 export default {
   title: 'Data Entry/Atomic/Input',
-  component: Input,
+  component: InputCore,
   argTypes: {
     theme: {
       options: ['primary', 'secondary'],
@@ -19,7 +19,7 @@ export default {
   }
 };
 
-const Template = (args) => <Input {...args} />;
+const Template = (args) => <InputCore {...args} />;
 
 export const CournerInput = Template.bind({});
 

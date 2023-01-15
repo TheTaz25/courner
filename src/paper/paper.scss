@@ -1,0 +1,13 @@
+@import '../styles/corner.scss';
+
+.c-paper {
+  @include corners;
+  display: inline-block;
+  background-color: var(--white);
+  padding: 1rem;
+  transition: box-shadow 250ms ease;
+
+  &.c-bordered {
+    outline: 1px solid var(--gray-tint-30);
+  }
+}

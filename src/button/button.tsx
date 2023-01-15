@@ -52,7 +52,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     className,
     'c-button',
     'c-corner-tr',
-    'c-interactive',
+    'c-transition_quick',
     getThemeVariant(theme, variant),
     buttonSizes[size] ?? buttonSizes.medium,
     block ? 'c-button-block' : undefined,
