@@ -14,3 +14,6 @@ Add Images if necessary. If no images are available, try to be specific as possi
 
 **Added Value**
 Please describe, what added value this example will bring
+
+**Missing Components to fulfil**
+Are you in need of additional components that do not exist yet? 
