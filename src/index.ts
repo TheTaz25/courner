@@ -12,3 +12,6 @@ export { default as InputCore } from './inputCore';
 
 export type { PaperProps } from './paper';
 export { default as Paper } from './paper';
+
+export type { CenterProps } from './center';
+export { default as Center } from './center';
