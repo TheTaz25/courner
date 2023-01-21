@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import cls from '../utils/cls';
 
 type ButtonVariants = 'default'
