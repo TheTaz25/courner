@@ -35,17 +35,19 @@ const InputWrapper = forwardRef<HTMLDivElement, InputProps>(({
   return (
     <div {...props} ref={ref} className={classes}>
       <Label error={error}>{label}</Label>
-      <InputCore {...inputProps} ref={inputRef} hasError={error} />
-      { error && (
-        <Accessory theme='error'>
-          {errorText}
-        </Accessory>
-      )}
-      { showDescription && (
-        <Accessory>
-          {description}
-        </Accessory>
-      )}
+      <div className="c-input-wrapper__inner">
+        <InputCore {...inputProps} ref={inputRef} hasError={error} />
+        { error && (
+          <Accessory theme='error'>
+            {errorText}
+          </Accessory>
+        )}
+        { showDescription && (
+          <Accessory>
+            {description}
+          </Accessory>
+        )}
+      </div>
     </div>
   );
 });

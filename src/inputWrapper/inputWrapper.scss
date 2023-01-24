@@ -1,8 +1,38 @@
+$breakpoint-upper-mobile: 425px;
+$breakpoint-upper-tablet: 768px;
+
 .c-input-wrapper {
   display: flex;
   flex-direction: column;
-  
+
   & > .c-label, .c-input {
     margin-bottom: 4px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  @media screen and (min-width: $breakpoint-upper-mobile) {
+    flex-direction: row;
+
+    & > .c-label {
+      max-width: 250px;
+      flex-grow: 1;
+      margin-top: .7rem;
+    }
+
+    &__inner {
+      flex-grow: 1;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-upper-tablet) {
+    & .c-label {
+      text-align: end;
+      margin-right: 1rem;
+    }
   }
 }

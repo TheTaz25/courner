@@ -29,5 +29,5 @@ const Template = (args) => <Input {...args} />;
 export const CournerInputWrapper = Template.bind({});
 
 CournerInputWrapper.args = {
-  label: "Component Label"
+  label: "Component Label",
 };
