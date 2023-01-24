@@ -11,7 +11,7 @@ type Themes =
 | 'secondary';
 
 export interface AccessoryProps extends React.HTMLProps<HTMLSpanElement> {
-  theme: Themes
+  theme?: Themes
 }
 
 const AccessoryText = forwardRef<HTMLSpanElement, AccessoryProps>(({

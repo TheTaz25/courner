@@ -36,5 +36,13 @@ body {
 }
 
 .c-accessory {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.c-label {
+  font-size: 1rem;
+
+  &.c-error {
+    color: var(--error);
+  }
 }
