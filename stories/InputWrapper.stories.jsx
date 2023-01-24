@@ -3,7 +3,7 @@ import React from 'react';
 import { Input } from '../src';
 
 export default {
-  title: 'Data Entry/Composed/Wrapped Inpupt',
+  title: 'Data Entry/Composed/Wrapped Input',
   component: Input,
   argTypes: {
     error: {
