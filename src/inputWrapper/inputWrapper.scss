@@ -1,0 +1,8 @@
+.c-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  & > .c-label, .c-input {
+    margin-bottom: 4px;
+  }
+}

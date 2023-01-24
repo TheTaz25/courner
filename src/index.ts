@@ -15,3 +15,6 @@ export { default as Paper } from './paper';
 
 export type { CenterProps } from './center';
 export { default as Center } from './center';
+
+export type { InputProps } from './inputWrapper';
+export { default as Input } from './inputWrapper';
