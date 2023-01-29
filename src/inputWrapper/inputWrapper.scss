@@ -1,14 +1,20 @@
+@import '../styles/mixin.scss';
+
 $breakpoint-upper-mobile: 425px;
 $breakpoint-upper-tablet: 900px;
 $breakpoint-upper-desktop: 2000px;
 $breakpoint-upper-laptop: 1400px;
+
+$input-wrapper-bottom-margin: .25;
+$input-wrapper-label-above-mobile-top-margin: .7;
+$input-wrapper-label-above-tablet-margin: 1;
 
 .c-input-wrapper {
   display: flex;
   flex-direction: column;
 
   & > .c-label, .c-input {
-    margin-bottom: 4px;
+    @include m-b($input-wrapper-bottom-margin);
   }
 
   &__inner {
@@ -23,7 +29,8 @@ $breakpoint-upper-laptop: 1400px;
     & > .c-label {
       max-width: 250px;
       flex-grow: 1;
-      margin-top: .7rem;
+
+      @include m-t($input-wrapper-label-above-mobile-top-margin);
     }
 
     &__inner {
@@ -34,7 +41,7 @@ $breakpoint-upper-laptop: 1400px;
   @media screen and (min-width: $breakpoint-upper-tablet) {
     & .c-label {
       text-align: end;
-      margin-right: 1rem;
+      @include m-r($input-wrapper-label-above-tablet-margin);
     }
   }
 }

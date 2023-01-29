@@ -11,7 +11,7 @@ body {
 }
 
 .c-header {
-  margin: 0;
+  @include m(0);
 
   &.c-title {
     @include fontSize($font-size-title-mod);

@@ -8,3 +8,15 @@ $base-margin: 1rem !default;
 @mixin m($modifier: 1) {
   margin: $modifier * $base-margin;
 }
+
+@mixin m-t($modifier: 1) {
+  margin-top: $modifier * $base-margin;
+}
+
+@mixin m-b($modifier: 1) {
+  margin-bottom: $modifier * $base-margin;
+}
+
+@mixin m-r($modifier: 1) {
+  margin-right: $modifier * $base-margin;
+}
