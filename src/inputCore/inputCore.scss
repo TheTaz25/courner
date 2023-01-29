@@ -1,14 +1,15 @@
 @import '../styles/corner.scss';
+@import '../styles/mixins.scss';
 
 .c-input {
   @include corners;
+  @include baseFont;
   padding: 0.5rem;
   outline: none;
   border-width: 2px;
   border-style: solid;
   border-color: var(--gray-tint-15);
   transition: border-color 200ms ease-in-out;
-  font-size: 1rem;
 
   &.c-error {
     border-color: var(--error);

@@ -1,3 +1,10 @@
+@import '../styles/mixins.scss';
+
+$font-size-title-mod: 2.5 !default;
+$font-size-subtitle-mod: 2 !default;
+$font-size-blocktitle-mod: 1.75 !default;
+$font-size-paragraph-mod: 1.25 !default;
+
 // insert style definitions for this component here
 body {
   font-family: 'Open Sans', 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -7,40 +14,40 @@ body {
   margin: 0;
 
   &.c-title {
-    font-size: 2.5rem;
+    @include fontSize($font-size-title-mod);
   }
   
   &.c-subtitle {
-    font-size: 2rem;
+    @include fontSize($font-size-subtitle-mod);
   }
   
   &.c-blocktitle {
-    font-size: 1.75rem;
+    @include fontSize($font-size-blocktitle-mod);
   }
 }
 
 .c-typo {
-  font-size: 1.15rem;
+  @include baseFont;
 
   &.c-font-large {
-    font-size: 1.5rem;
+    @include largeFont;
   }
 
   &.c-font-small {
-    font-size: 0.9rem;
+    @include smallFont;
   }
 
   &.c-paragraph {
-    font-size: 1.25rem;
+    @include fontSize($font-size-paragraph-mod);
   }
 }
 
 .c-accessory {
-  font-size: 0.8rem;
+  @include microFont;
 }
 
 .c-label {
-  font-size: 1rem;
+  @include fontSize;
 
   &.c-error {
     color: var(--error);

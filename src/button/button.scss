@@ -1,7 +1,9 @@
 @import '../styles/corner.scss';
+@import '../styles/mixins.scss';
 
 .c-button {
   // TODO: needs to be extracted into a variable with calculations (eg space(1))
+  @include baseFont;
   cursor: pointer;
   font-weight: bold;
   
@@ -9,17 +11,16 @@
   
   &.c-button-medium {
     padding: 1rem;
-    font-size: 1rem;
   }
 
   &.c-button-large {
     padding: 1.5rem;
-    font-size: 1.4rem;
+    @include largeFont;
   }
 
   &.c-button-small {
     padding: 0.5rem;
-    font-size: 0.9rem;
+    @include smallFont;
     font-weight: 500;
   }
 
