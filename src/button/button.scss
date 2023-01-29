@@ -1,6 +1,10 @@
 @import '../styles/corner.scss';
 @import '../styles/mixins.scss';
 
+$button-medium-padding: 1;
+$button-large-padding: 1.5;
+$button-small-padding: .5;
+
 .c-button {
   // TODO: needs to be extracted into a variable with calculations (eg space(1))
   @include baseFont;
@@ -10,16 +14,16 @@
   @include corners;
   
   &.c-button-medium {
-    padding: 1rem;
+    @include p($button-medium-padding);
   }
 
   &.c-button-large {
-    padding: 1.5rem;
+    @include p($button-large-padding);
     @include largeFont;
   }
 
   &.c-button-small {
-    padding: 0.5rem;
+    @include p($button-small-padding);
     @include smallFont;
     font-weight: 500;
   }

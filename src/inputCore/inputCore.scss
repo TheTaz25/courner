@@ -1,10 +1,12 @@
 @import '../styles/corner.scss';
 @import '../styles/mixins.scss';
 
+$input-padding: .5;
+
 .c-input {
   @include corners;
   @include baseFont;
-  padding: 0.5rem;
+  @include p($input-padding);
   outline: none;
   border-width: 2px;
   border-style: solid;

@@ -1,10 +1,11 @@
 @import '../styles/corner.scss';
+@import '../styles/mixins.scss';
 
 .c-paper {
   @include corners;
+  @include p;
   display: inline-block;
   background-color: var(--white);
-  padding: 1rem;
   transition: box-shadow 250ms ease;
 
   &.c-bordered {
