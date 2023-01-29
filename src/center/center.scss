@@ -1,7 +1,7 @@
+@import '../styles/mixins.scss';
+
 .c-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($justify-content: center, $align-items: center);
 
   &.c-expand {
     width: 100%;

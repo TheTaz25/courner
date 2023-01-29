@@ -1,0 +1,25 @@
+@mixin flex(
+  $inline: false,
+  $justify-content: null,
+  $align-items: null,
+  $direction: null,
+) {
+  @if ($inline) {
+    display: inline-flex;
+  }
+  @else {
+    display: flex;
+  }
+
+  @if ($justify-content) {
+    justify-content: $justify-content;
+  }
+
+  @if ($align-items) {
+    align-items: $align-items;
+  }
+
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+}

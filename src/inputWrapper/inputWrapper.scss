@@ -9,25 +9,24 @@ $input-wrapper-bottom-margin: .25;
 $input-wrapper-label-above-mobile-top-margin: .7;
 $input-wrapper-label-above-tablet-margin: 1;
 
+$input-wrapper-label-mix-width: 250px;
+
 .c-input-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex($direction: column);
 
   & > .c-label, .c-input {
     @include m-b($input-wrapper-bottom-margin);
   }
 
   &__inner {
-    display: flex;
-    flex-direction: column;
+    @include flex($direction: column);
   }
   
-
   @media screen and (min-width: $breakpoint-upper-mobile) {
     flex-direction: row;
 
     & > .c-label {
-      max-width: 250px;
+      max-width: $input-wrapper-label-mix-width;
       flex-grow: 1;
 
       @include m-t($input-wrapper-label-above-mobile-top-margin);
